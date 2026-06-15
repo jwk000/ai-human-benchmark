@@ -38,6 +38,20 @@ npm run build
 
 项目已经在 `vite.config.ts` 中配置了 `base: "./"`，构建后的资源会使用相对路径，例如 `./assets/...`。这样发布到 GitHub Pages 的项目页时，不会因为仓库名子路径导致 JS/CSS 资源 404 和页面白屏。
 
+部署到 `gh-pages` 分支：
+
+```bash
+npm run deploy
+```
+
+部署前请确保当前分支改动已经提交。脚本会执行构建，把 `dist/` 内容提交并推送到 `origin/gh-pages`。GitHub Pages 设置中选择 `Deploy from a branch`，分支选择 `gh-pages`，目录选择 `/ (root)`。
+
+如果需要换远端或分支，可以使用环境变量：
+
+```bash
+DEPLOY_REMOTE=origin DEPLOY_BRANCH=gh-pages npm run deploy
+```
+
 ## 成绩记录
 
 每项测试会记录：
