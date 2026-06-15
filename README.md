@@ -34,6 +34,10 @@ npm run build
 
 构建产物会输出到 `dist/`。
 
+## GitHub Pages
+
+项目已经在 `vite.config.ts` 中配置了 `base: "./"`，构建后的资源会使用相对路径，例如 `./assets/...`。这样发布到 GitHub Pages 的项目页时，不会因为仓库名子路径导致 JS/CSS 资源 404 和页面白屏。
+
 ## 成绩记录
 
 每项测试会记录：
